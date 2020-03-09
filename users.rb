@@ -1,17 +1,15 @@
 class Employee
-    attr_accessor
-    def initialize(name, userscore)
-    @name = [name]
-    @userscore = [userscore]
-    end
-
-    def get_name
-        return @name
-    end
-
-    def get_data
-        return @name + @userscore
-    end
+    attr_reader :name, :userscore
+  def initialize
+   @name = []
+   @userscore = []
+  end
+def data(name, userscore)
+    @name.push(name)
+    @userscore.push(userscore)
 end
 
-
+  def get_data
+    return "#{@name.to_s} #{@userscore.to_s}"
+  end
+end

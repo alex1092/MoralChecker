@@ -1,9 +1,10 @@
-
 #THESE ARE THE REQUIRED GEMS
 require "artii"
 require "tty-file"
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./users.rb"
+
+employees = Employee.new
 
 system("clear")
 #STARTING WELCOME SCREEN LOOP
@@ -16,7 +17,7 @@ while exit_app == false
 
   puts "------Welcome to MoralTrack choose your option-----"
 
-  puts "1 -  Enter your score\n"
+  puts "1 - Enter your score\n"
   puts "2 - Admin\n"
   puts "3 - Exit"
 
@@ -43,30 +44,33 @@ while exit_app == false
     end
 
     #Saves the users name and score to a class
-    employees = Employee.new([username], [user_score])
+
+    employees.data(username, user_score)
 
     #Admin choice
   elsif user_input == 2
     system("clear")
     puts "welcome admin\n"
     puts "What would you like to do?\n"
-    puts "1 - Check weekly stats\n"
-    puts "2 - Check Pie Graph\n"
-    puts "3 - Exit"
+    puts "1 - Check stats\n"
+    puts "2 - Download Data\n"
+    puts "3 - Weekly data"
+    puts "4 - Exit"
 
     admin_choice = gets.chomp.to_i
 
-        if admin_choice == 1
-            puts "#{employees.get_data}"
-        elsif admin_choice == 2
-            puts ""
-        elsif admin_choice == 3
-            puts ""
-        else
-            puts "thats not a valid"
-        end
-
-
+    if admin_choice == 1
+      puts "#{employees.get_data}"
+    elsif admin_choice == 2
+      puts "" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
+    elsif admin_choice == 3
+      puts "" #FIGURE OUT HOW TO GET THE TOTAL OF ALL DATA
+    elsif admin_choice == 4
+      puts "Thanks for using MoralTracker"
+      exit_app = true
+    else
+      puts "thats not a valid input"
+    end
 
     #exits the terminal
   elsif user_input == 3
