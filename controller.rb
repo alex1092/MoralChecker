@@ -35,14 +35,17 @@ while exit_app == false
       puts "sounds like you had a pretty rough day #{username.capitalize}, let your manager know what happend"
     elsif user_score > 3 && user_score <= 5
       puts "tommorow is a new day"
-    elsif user_score > 5 && user_score < 8
+    elsif user_score > 5 && user_score <= 8
       puts "Im glad you had a good day #{username.capitalize} :)"
     elsif user_score > 8 && user_score <= 10
       puts "Great #{username.capitalize} sounds like you had a great day... Keep it up!!!"
-    else
-      "Thats an invalid input"
+    else 
+      puts "Thats an invalid input"
     end
 
+    puts "press ENTER to continue"
+    gets.chomp
+    system("clear")
     #Saves the users name and score to a class
 
     employees.data(username, user_score)
@@ -60,7 +63,10 @@ while exit_app == false
     admin_choice = gets.chomp.to_i
 
     if admin_choice == 1
+        system("clear")
       puts "#{employees.get_data}"
+      puts "Press ENTER to continue"
+      gets.chomp
     elsif admin_choice == 2
       puts "" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
     elsif admin_choice == 3
