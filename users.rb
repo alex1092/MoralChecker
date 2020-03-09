@@ -1,8 +1,8 @@
 class Employee
     attr_accessor
-    def initialize(name, userscore=[])
-    @name = name
-    @userscore = userscore
+    def initialize(name, userscore)
+    @name = [name]
+    @userscore = [userscore]
     end
 
     def get_name
