@@ -11,7 +11,7 @@ system("clear")
 exit_app = false
 while exit_app == false
 
-  #LOGO
+  #LOGO/ FRONT PAGE
   logo = Artii::Base.new
   puts logo.asciify("MoralTrack!")
 
@@ -30,7 +30,7 @@ while exit_app == false
     puts "Ok #{username} from 1 - 10 how was your day "
     user_score = gets.chomp.to_i
 
-    #THIS IS CHECKING THE USERS SCORE
+    #THIS IS CHECKING THE USERS SCORE 
     if user_score <= 3
       puts "sounds like you had a pretty rough day #{username.capitalize}, let your manager know what happend"
     elsif user_score > 3 && user_score <= 5
@@ -46,8 +46,8 @@ while exit_app == false
     puts "press ENTER to continue"
     gets.chomp
     system("clear")
+   
     #Saves the users name and score to a class
-
     employees.data(username, user_score)
 
     #Admin choice
@@ -62,25 +62,36 @@ while exit_app == false
 
     admin_choice = gets.chomp.to_i
 
+    #THIS SHOWS THE NAME AND ALLOCATED SCORES OF ALL DATA 
     if admin_choice == 1
         system("clear")
-      puts "#{employees.get_data}"
+      puts "#{employees.get_data}\n"
+      puts "Overall total: #{employees.score_total} "
       puts "Press ENTER to continue"
-      gets.chomp
+      gets
+      system("clear")
+    
     elsif admin_choice == 2
       puts "" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
+    
+    #THIS CALCULATES THE WEEKLY SCORE SO FAR
     elsif admin_choice == 3
-      puts "" #FIGURE OUT HOW TO GET THE TOTAL OF ALL DATA
+      puts "The total weekly score is: #{employees.score_total}\n" 
+      puts "Press ENTER to continue"
+      gets
+      system("clear")
+    
+      #EXITS THE APP
     elsif admin_choice == 4
-      puts "Thanks for using MoralTracker"
-      exit_app = true
+      puts "Thanks for using MoralTrack"
+      exit_app = true #EXITS THE APP/LOOP
     else
       puts "thats not a valid input"
     end
 
     #exits the terminal
   elsif user_input == 3
-    puts "Thanks for using MoralCheck"
+    puts "Thanks for using MoralTrack"
     exit_app = true
   end
 end
