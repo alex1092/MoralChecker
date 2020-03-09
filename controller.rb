@@ -1,7 +1,7 @@
 
 #THESE ARE THE REQUIRED GEMS
 require "artii"
-
+require "tty-file"
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./users.rb"
 
@@ -47,7 +47,26 @@ while exit_app == false
 
     #Admin choice
   elsif user_input == 2
-    puts "welcome admin"
+    system("clear")
+    puts "welcome admin\n"
+    puts "What would you like to do?\n"
+    puts "1 - Check weekly stats\n"
+    puts "2 - Check Pie Graph\n"
+    puts "3 - Exit"
+
+    admin_choice = gets.chomp.to_i
+
+        if admin_choice == 1
+            puts "#{employees.get_data}"
+        elsif admin_choice == 2
+            puts ""
+        elsif admin_choice == 3
+            puts ""
+        else
+            puts "thats not a valid"
+        end
+
+
 
     #exits the terminal
   elsif user_input == 3

@@ -9,11 +9,8 @@ class Employee
         return @name
     end
 
-    def get_score
-        return @userscore
-    end
-    def set_score
-        set_score = @userscore
+    def get_data
+        return @name + @userscore
     end
 end
 

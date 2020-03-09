@@ -5,3 +5,10 @@ source "https://rubygems.org"
 git_source(:github) {|repo_name| "https://github.com/#{repo_name}" }
 
 # gem "rails"
+
+gem "tty", "~> 0.7.0"
+
+gem "artii", "~> 2.1"
+
+gem 'tty-file'
+
