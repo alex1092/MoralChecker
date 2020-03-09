@@ -1,2 +1,1 @@
-# MoralChecker
-My MoralChecker Terminal app
+rubymon is a bug battle
