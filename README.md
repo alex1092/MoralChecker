@@ -18,7 +18,7 @@ Trello located at [https://trello.com/b/YzGTufvi/moraltrack]
 
 - Employees will have the option to rate their moral from 1-10 and will also be able to leave a message about their day this will include anything that they enjoyed about their day, anything that went wrong and any suggestions the employee may have.  Employers/admin will be able to track daily stats, total stats (All moral points added together to give an overall moral score), read messages, suggestions and download documentation which store all data
 
-- Moral Track’s target audience is any organisation that understands the value in their staffs moral.  It can be used together with a Clock in/Clock out machine.  After a user clocks out, they will track their moral for the day and add a message.  The organization will then use this data in order to find anything that needs to be addressed.
+- Moral Track’s target audience is any organization that understands the value in their staffs moral.  It can be used together with a Clock in/Clock out machine.  After a user clocks out, they will track their moral for the day and add a message.  The organization will then use this data in order to find anything that needs to be addressed.
 
 
 ## Features
@@ -51,15 +51,15 @@ Your outline must include:
 ## Diagram
 	Develop a diagram which describes the control flow of your application. Your diagram must:
 - show the workflow/logic and/or integration of the features in your application for each feature.
-- utilise a recognised format or set of conventions for a control flow diagram, such as UML.
+- utilize a recognized format or set of conventions for a control flow diagram, such as UML.
 
 ## Implementation Plan
 Develop an implementation plan which:
 - outlines how each feature will be implemented and a checklist of tasks for each feature
-- prioritise the implementation of different features, or checklist items within a feature
+- prioritize the implementation of different features, or checklist items within a feature
 - provide a deadline, duration or other time indicator for each feature or checklist/checklist-item
 
-Utilise a suitable project management platform to track this implementation plan
+Utilize a suitable project management platform to track this implementation plan
 
 > Your checklists for each feature should have at least 5 items.
 
