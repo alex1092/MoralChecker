@@ -20,6 +20,9 @@ Trello located at [https://trello.com/b/YzGTufvi/moraltrack]
 
 - Moral Track’s target audience is any organization that understands the value in their staffs moral.  It can be used together with a Clock in/Clock out machine.  After a user clocks out, they will track their moral for the day and add a message.  The organization will then use this data in order to find anything that needs to be addressed.
 
+## Motivation
+
+- Moral in the workplace is often overlooked.  The employers are a vital part of any organisation if not the most important. Employee morale describes the overall outlook, attitude, satisfaction, and confidence that employees feel at work. When employees are positive about their work environment and believe that they can meet their most important career and vocational needs, employee morale is positive or high and productivity will also be high.
 
 ## Features
 
