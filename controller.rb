@@ -12,14 +12,18 @@ exit_app = false
 while exit_app == false
 
   #LOGO/ FRONT PAGE
-  logo = Artii::Base.new
-  puts logo.asciify("MoralTrack!")
+  def front_page
+    logo = Artii::Base.new
+    puts logo.asciify("MoralTrack!")
 
-  puts "------Welcome to MoralTrack choose your option-----"
+    puts "------Welcome to MoralTrack choose your option-----"
 
-  puts "1 - Enter your score\n"
-  puts "2 - Admin\n"
-  puts "3 - Exit"
+    puts "1 - Enter your score\n"
+    puts "2 - Admin\n"
+    puts "3 - Exit"
+  end
+
+  front_page
 
   #CHECKING WHAT THE USER WANTS TO DO
   user_input = gets.chomp.to_i
@@ -30,7 +34,7 @@ while exit_app == false
     puts "Ok #{username} from 1 - 10 how was your day "
     user_score = gets.chomp.to_i
 
-    #THIS IS CHECKING THE USERS SCORE 
+    #THIS IS CHECKING THE USERS SCORE
     if user_score <= 3
       puts "sounds like you had a pretty rough day #{username.capitalize}, let your manager know what happend"
     elsif user_score > 3 && user_score <= 5
@@ -39,10 +43,10 @@ while exit_app == false
       puts "Im glad you had a good day #{username.capitalize} :)"
     elsif user_score > 8 && user_score <= 10
       puts "Great #{username.capitalize} sounds like you had a great day... Keep it up!!!"
-    else 
+    else
       puts "Thats an invalid input"
     end
-    
+
     #This stores the users message!!
     puts "Type your message bellow"
     user_message = gets.chomp
@@ -50,7 +54,7 @@ while exit_app == false
     puts "press ENTER to continue"
     gets
     system("clear")
-   
+
     #Saves the users name and score to a class
     employees.data(username, user_score)
 
@@ -66,25 +70,24 @@ while exit_app == false
 
     admin_choice = gets.chomp.to_i
 
-    #THIS SHOWS THE NAME AND ALLOCATED SCORES OF ALL DATA 
+    #THIS SHOWS THE NAME AND ALLOCATED SCORES OF ALL DATA
     if admin_choice == 1
-        system("clear")
+      system("clear")
       puts "#{employees.get_data}\n"
       puts "Overall total: #{employees.score_total} "
       puts "Press ENTER to continue"
       gets
       system("clear")
-    
     elsif admin_choice == 2
       puts "" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
-    
-    #THIS CALCULATES THE WEEKLY SCORE SO FAR
+
+      #THIS CALCULATES THE WEEKLY SCORE SO FAR
     elsif admin_choice == 3
-      puts "The total weekly score is: #{employees.score_total}\n" 
+      puts "The total weekly score is: #{employees.score_total}\n"
       puts "Press ENTER to continue"
       gets
       system("clear")
-    
+
       #EXITS THE APP
     elsif admin_choice == 4
       puts "Thanks for using MoralTrack"
