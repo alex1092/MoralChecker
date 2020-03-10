@@ -64,16 +64,18 @@ data flow diagram https://github.com/alex1092/MoralChecker/blob/master/docs/data
 
 - if the user selects 4 - exit they will be returned to the front screen 
 
-5. If the user selects 4 - exit the appication will close
+5. If the user selects 4 - exit the application will close
 
 
 
 ## Diagram
-	Develop a diagram which describes the control flow of your application. Your diagram must:
-- show the workflow/logic and/or integration of the features in your application for each feature.
-- utilize a recognized format or set of conventions for a control flow diagram, such as UML.
+
+Data flow diagram can be found at https://github.com/alex1092/MoralChecker/blob/master/docs/moralcheck_diagram.png
 
 ## Implementation Plan
+
+Implementation plan was created using trello and can be located at https://trello.com/b/YzGTufvi/moraltrack
+
 Develop an implementation plan which:
 - outlines how each feature will be implemented and a checklist of tasks for each feature
 - prioritize the implementation of different features, or checklist items within a feature
