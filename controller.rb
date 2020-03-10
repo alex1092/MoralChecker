@@ -32,10 +32,11 @@ while exit_app == false
   case user_input
   when 1
     system("clear")
-    puts "Welcome user please enter your name" #this collects the users name
+    puts "Welcome user please enter your name"
     username = gets.chomp
 
     puts "Ok #{username} from 1 - 10 how was your day "
+
     user_score = gets.chomp.to_i
 
     #THIS IS CHECKING THE USERS SCORE
@@ -53,7 +54,7 @@ while exit_app == false
       input = false
     end
 
-    #This stores the users message!!
+    #STORES USERS MESSAGE
     puts "Type your message bellow"
     user_message = gets.chomp
     employees.set_message(user_message) #COLLECTS THE USERS MESSAGE
@@ -62,10 +63,11 @@ while exit_app == false
     gets
     system("clear")
 
-    #Saves the users name and score to a class
+    #SAVES EMPLOYEE NAME AND SCORE
     employees.data(username, user_score)
+
+    #ADMINS MENU
   when 2
-    password = 1234
     system("clear")
     puts "welcome admin\n"
     puts "What would you like to do?\n"
@@ -77,6 +79,7 @@ while exit_app == false
     admin_choice = gets.chomp.to_i
 
     case admin_choice
+    #THIS SHOWS TOTAL SCORE AND USERS DATA
     when 1
       system("clear")
       puts "#{employees.get_data}\n"
@@ -84,23 +87,31 @@ while exit_app == false
       puts "Press ENTER to continue"
       gets
       system("clear")
+
+      #THIS DOWNLOADS ALL DATA TO FILE.CSV
     when 2
-      puts "Ok Check your file.csv file" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
+      puts "Ok Check your file.csv file"
       employees.download_csv
       puts " pres ENTER to continue"
       gets
       system("clear")
+
+      #DISPLAYS TOTAL WEEKLY SCORE
     when 3
       puts "The total weekly score is: #{employees.score_total}\n"
       puts "Press ENTER to continue"
       gets
       system("clear")
+      exit_app = true
+
+      #EXITS THE APP/LOOP
     when 4
       puts "Thanks for using MoralTrack"
-      exit_app = true #EXITS THE APP/LOOP
     else
       puts "Thats not a valid input"
     end
+
+    #EXITS APP
   when 3
     puts "Thanks for using MoralTrack"
     exit_app = true
