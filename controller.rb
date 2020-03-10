@@ -1,8 +1,10 @@
 #THESE ARE THE REQUIRED GEMS
 require "artii"
 require "tty-file"
+require "csv"
+
 #THESE ARE THE REQUIRED LOCAL FILES
-require_relative "./users.rb"
+require_relative "./classes.rb"
 
 employees = Employee.new
 
@@ -31,9 +33,9 @@ while exit_app == false
     system("clear")
     puts "Welcome user please enter your name" #this collects the users name
     username = gets.chomp
+
     puts "Ok #{username} from 1 - 10 how was your day "
     user_score = gets.chomp.to_i
-
     #THIS IS CHECKING THE USERS SCORE
     if user_score <= 3
       puts "sounds like you had a pretty rough day #{username.capitalize}, let your manager know what happend"
@@ -50,6 +52,7 @@ while exit_app == false
     #This stores the users message!!
     puts "Type your message bellow"
     user_message = gets.chomp
+    employees.set_message(user_message) #COLLECTS THE USERS MESSAGE
     puts "Thanks for that :)"
     puts "press ENTER to continue"
     gets
@@ -78,8 +81,13 @@ while exit_app == false
       puts "Press ENTER to continue"
       gets
       system("clear")
+      
     elsif admin_choice == 2
-      puts "" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
+      puts "Ok Check your file.csv file" #FIGURE OUT HOW TO SEND DATA TO A FILE FOR DOWNLOAD
+      employees.download_csv
+      puts " pres ENTER to continue"
+      gets
+      system("clear")
 
       #THIS CALCULATES THE WEEKLY SCORE SO FAR
     elsif admin_choice == 3
