@@ -33,7 +33,7 @@ class Employee
       csv << @name
       csv << @userscore
       csv << @message
-      csv << [score_total]
+      csv << ["Total: #{score_total}"]
     end
   end
 end

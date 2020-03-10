@@ -37,8 +37,8 @@ while exit_app == false
 
     puts "Ok #{username} from 1 - 10 how was your day "
     user_score = gets.chomp.to_i
-
     #THIS IS CHECKING THE USERS SCORE
+
     case user_score
     when 0...3
       puts "sounds like you had a pretty rough day #{username.capitalize}, let your manager know what happend"
@@ -50,21 +50,20 @@ while exit_app == false
       puts "Great #{username.capitalize} sounds like you had a great day... Keep it up!!!"
     else
       puts "Invalid number"
-      input = false
     end
+  #This stores the users message!!
+  puts "Type your message bellow"
+  user_message = gets.chomp
+  employees.set_message(user_message) #COLLECTS THE USERS MESSAGE
+  puts "Thanks for that :)"
+  puts "press ENTER to continue"
+  gets
+  system("clear")
 
-    #This stores the users message!!
-    puts "Type your message bellow"
-    user_message = gets.chomp
-    employees.set_message(user_message) #COLLECTS THE USERS MESSAGE
-    puts "Thanks for that :)"
-    puts "press ENTER to continue"
-    gets
-    system("clear")
+  #Saves the users name and score to a class
+  employees.data(username, user_score)
 
-    #Saves the users name and score to a class
-    employees.data(username, user_score)
-  when 2
+when 2
     system("clear")
     puts "welcome admin\n"
     puts "What would you like to do?\n"
