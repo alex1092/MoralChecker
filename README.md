@@ -1,8 +1,8 @@
 # MoralTrack
 
-### created by Alex little git: [https://github.com/alex1092/MoralChecker]
+### created by Alex little git: https://github.com/alex1092/MoralChecker
 
-Trello located at [https://trello.com/b/YzGTufvi/moraltrack]
+Trello located at https://trello.com/b/YzGTufvi/moraltrack
 
 #### to install simply type into your terminal ``` bash ./install_and_run.sh ```
 
@@ -40,12 +40,12 @@ Using classes, you can add as many employees as you want tracking as many staff 
 
 4. DOWNLOAD CSV WITH STAFF DETAILS
 
-In the admin panel you will have the option to download a detailed list of all staff, read messages and check staffs moral. This is useful if you need to show others how staffs moral is tracking and to help address problems within your organisation
+In the admin panel you will have the option to download a detailed list of all staff, read messages and check staffs moral. This is useful if you need to show others how staffs moral is tracking and to help address problems within your organization
 
 
 ## User Interaction and Experience
 
-data flow diagram [../docs/u]
+data flow diagram https://github.com/alex1092/MoralChecker/blob/master/docs/dataflow_diagram.png
 
 Develop an outline of the user interaction and experience for the application.
 Your outline must include:
