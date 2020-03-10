@@ -47,11 +47,26 @@ In the admin panel you will have the option to download a detailed list of all s
 
 data flow diagram https://github.com/alex1092/MoralChecker/blob/master/docs/dataflow_diagram.png
 
-Develop an outline of the user interaction and experience for the application.
-Your outline must include:
-- how the user will find out how to interact with / use each feature
-- how the user will interact with / use each feature
-- how errors will be handled by the application and displayed to the user
+1. To run the application first you need to install all the gems and dependencies you can either type into your terminal ``` bash install_and_run.sh ``` or ``` bundle install ``` then to run MoralCheck type the following into your terminal ``` controller.rb ``` 
+
+2. From this point the user will find themself at the home screen with 3 different options 1 - Enter your score 2 - Admin 3 - exit. 
+
+3. If the user choses 1 - Enter your score they will be prompted with "Enter your name" Once the user enters their name it will be saved to the variable username. They will then have the opportunity to score there day from 1-10, their choice will be saved in the variable user_score.  The user will then be prompted to leave a message, the message will be saved in employees.set_message(user_message). Once complete the user will then return back to the front page and their input will be saved to @name, @userscore & @message arrays
+
+4. If the user selects option 2 (Admin) they will be taken to the admin page where they will have 4 selections 1 - Check stats, 2 - Download data, 3 - weekly data & 4 - exit 
+
+### From admin (user selects 2)
+- If the user selects 1 - Check stats employees.get_data will be called and will return @name, @userscore & @message. the user will then be prompted to hit enter where they wil be returned to the front screen
+
+- If the user selects 2 - Download data employees.download_csv will execute and @name, @userscore & @message will be sent to file.csv.  The user will then be prompted to return to the front screen 
+
+- If the user selects 3 - Total Weekly employees.score_total will be called. This will show the total moral score of all users calculated
+
+- if the user selects 4 - exit they will be returned to the front screen 
+
+5. If the user selects 4 - exit the appication will close
+
+
 
 ## Diagram
 	Develop a diagram which describes the control flow of your application. Your diagram must:
