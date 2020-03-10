@@ -65,6 +65,7 @@ while exit_app == false
     #Saves the users name and score to a class
     employees.data(username, user_score)
   when 2
+    password = 1234
     system("clear")
     puts "welcome admin\n"
     puts "What would you like to do?\n"
