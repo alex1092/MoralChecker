@@ -16,7 +16,7 @@ Trello located at [https://trello.com/b/YzGTufvi/moraltrack]
 
 - MoralTrack is being developed just for this, too ensure staff are happy and productive and to help employers make educated decisions on how to address low moral by giving employers a detailed list of all employers their moral for the day and any message they add.  All of this will be downloadable in a document
 
--Employees will have the option to rate their moral from 1-10 and will also be able to leave a message about their day this will include anything that they enjoyed about their day, anything that went wrong and any suggestions the employee may have.  Employers/admin will be able to track daily stats, total stats (All moral points added together to give an overall moral score), read messages, suggestions and download documentation which store all data
+- Employees will have the option to rate their moral from 1-10 and will also be able to leave a message about their day this will include anything that they enjoyed about their day, anything that went wrong and any suggestions the employee may have.  Employers/admin will be able to track daily stats, total stats (All moral points added together to give an overall moral score), read messages, suggestions and download documentation which store all data
 
 - Moral Track’s target audience is any organisation that understands the value in their staffs moral.  It can be used together with a Clock in/Clock out machine.  After a user clocks out, they will track their moral for the day and add a message.  The organization will then use this data in order to find anything that needs to be addressed.
 
