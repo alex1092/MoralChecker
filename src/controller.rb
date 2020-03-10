@@ -102,7 +102,6 @@ while exit_app == false
       puts "Press ENTER to continue"
       gets
       system("clear")
-      exit_app = true
 
       #EXITS THE APP/LOOP
     when 4
