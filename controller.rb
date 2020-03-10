@@ -42,9 +42,13 @@ while exit_app == false
     else 
       puts "Thats an invalid input"
     end
-
+    
+    #This stores the users message!!
+    puts "Type your message bellow"
+    user_message = gets.chomp
+    puts "Thanks for that :)"
     puts "press ENTER to continue"
-    gets.chomp
+    gets
     system("clear")
    
     #Saves the users name and score to a class

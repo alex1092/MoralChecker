@@ -18,9 +18,4 @@ end
   end
 end
 
-test = Employee.new
-test.data("Alex",10)
-test.data("ron",5)
-test.data("tim", 5)
-p test.score_total
 
