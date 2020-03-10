@@ -10,7 +10,7 @@ Trello located at [https://trello.com/b/YzGTufvi/moraltrack]
 
 ## Purpose & Scope
 
-- MoralTrack - Is designed to help employers track their staff’s moral as the weeks go by, it exists to ensure that staff's moral Is steady and helps employers make an educated decision on whether or not staff are happy.  This will help improve workplace culture and productivity 
+- MoralTrack - Is designed to help employers track their staff’s moral as the weeks go by, its purpose is to ensure that staff's moral Is steady and helps employers make an educated decision on whether or not staff are happy.  This will help improve workplace culture and productivity 
 
 - Moral is a very important factor of a company’s success, growth and staff’s productivity.  using MoralTrack will ensure employers know exactly how your staff's moral is tracking 
 
@@ -29,7 +29,7 @@ MoralTrack offers an easy to use home screen.  Displaying the MoralTrack logo an
 
 2. LOOPS BACK TO THE HOME SCREEN AFTER DATA IS LOGGED
 
-To make is easy for employers and employees the Home screen will appear after employees are finished logging their moral and adding their message, it will also loop back to the home screen after the admin has checked daily and weekly totals and downloaded files containing all stats 
+To make it easy for employers and employees the Home screen will appear after employees are finished logging their moral and adding their message, it will also loop back to the home screen after the admin has checked daily and weekly totals and downloaded files containing all stats 
 
 3. THE ABILITY TO ADD EXTRA STAFF
 
