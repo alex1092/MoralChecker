@@ -7,6 +7,7 @@ require_relative "./classes.rb"
 require_relative "./progressbar.rb"
 require_relative "./prompt.rb"
 
+#CREATING CLASS INSTANCES
 employees = Employee.new
 prompt = TTY::Prompt.new
 
@@ -16,18 +17,14 @@ exit_app = false
 while exit_app == false
 
   #LOGO/ FRONT PAGE
-  def front_page
-    logo = Artii::Base.new
-    puts logo.asciify("MoralTrack!")
-  end
-
-  front_page
+  logo = Artii::Base.new
+  puts logo.asciify("MoralTrack!")
 
   user_input = prompt.select("Choose your destiny?") do |menu|
-    menu.enum '.'
-    menu.choice 'Enter your score', 1
-    menu.choice 'Admin', 2
-    menu.choice 'Exit', 3
+    menu.enum "."
+    menu.choice "Enter your score", 1
+    menu.choice "Admin", 2
+    menu.choice "Exit", 3
   end
 
   case user_input
@@ -73,14 +70,12 @@ while exit_app == false
     puts "Welcome Admin"
 
     admin_choice = prompt.select("What would you like to do?") do |menu|
-    menu.enum '.'
-    menu.choice 'Check Stats', 1
-    menu.choice 'Export Data to CSV', 2
-    menu.choice 'Weekly Report', 3
-    menu.choice 'Exit', 4
-  end
-
-    
+      menu.enum "."
+      menu.choice "Check Stats", 1
+      menu.choice "Export Data to CSV", 2
+      menu.choice "Weekly Report", 3
+      menu.choice "Exit", 4
+    end
 
     case admin_choice
     #THIS SHOWS TOTAL SCORE AND USERS DATA

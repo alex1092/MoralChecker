@@ -37,5 +37,3 @@ class Employee
     end
   end
 end
-
-

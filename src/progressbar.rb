@@ -1,5 +1,7 @@
-require 'tty-progressbar'
+#REQUIRED GEM!!!!
+require "tty-progressbar"
 
+#THIS IS MY PROGRESS BAR METHOD
 def progress_bar
   bar = TTY::ProgressBar.new("downloading [:bar]", total: 30)
   30.times do
@@ -7,4 +9,3 @@ def progress_bar
     bar.advance(1)
   end
 end
-
