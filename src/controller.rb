@@ -3,6 +3,7 @@ require "artii"
 
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./classes.rb"
+require_relative "./progressbar.rb"
 
 employees = Employee.new
 
@@ -17,7 +18,6 @@ while exit_app == false
     puts logo.asciify("MoralTrack!")
 
     puts "------Welcome to MoralTrack choose your option-----"
-    br
     puts "1 - Enter your score\n"
     puts "2 - Admin\n"
     puts "3 - Exit"
@@ -88,6 +88,7 @@ while exit_app == false
 
       #THIS DOWNLOADS ALL DATA TO FILE.CSV
     when 2
+      progress_bar
       puts "Ok Check your file.csv file"
       employees.download_csv
       puts " pres ENTER to continue"
