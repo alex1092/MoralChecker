@@ -1,11 +1,14 @@
 #THESE ARE THE REQUIRED GEMS
 require "artii"
+require "tty-prompt"
 
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./classes.rb"
 require_relative "./progressbar.rb"
+require_relative "./prompt.rb"
 
 employees = Employee.new
+prompt = TTY::Prompt.new
 
 system("clear")
 #STARTING WELCOME SCREEN LOOP
@@ -16,16 +19,16 @@ while exit_app == false
   def front_page
     logo = Artii::Base.new
     puts logo.asciify("MoralTrack!")
-
-    puts "------Welcome to MoralTrack choose your option-----"
-    puts "1 - Enter your score\n"
-    puts "2 - Admin\n"
-    puts "3 - Exit"
   end
 
   front_page
 
-  user_input = gets.chomp.to_i
+  user_input = prompt.select("Choose your destiny?") do |menu|
+    menu.enum '.'
+    menu.choice 'Enter your score', 1
+    menu.choice 'Admin', 2
+    menu.choice 'Exit', 3
+  end
 
   case user_input
   when 1
@@ -67,14 +70,17 @@ while exit_app == false
     #ADMINS MENU
   when 2
     system("clear")
-    puts "welcome admin\n"
-    puts "What would you like to do?\n"
-    puts "1 - Check stats\n"
-    puts "2 - Download Data\n"
-    puts "3 - Weekly data"
-    puts "4 - Exit"
+    puts "Welcome Admin"
 
-    admin_choice = gets.chomp.to_i
+    admin_choice = prompt.select("What would you like to do?") do |menu|
+    menu.enum '.'
+    menu.choice 'Check Stats', 1
+    menu.choice 'Export Data to CSV', 2
+    menu.choice 'Weekly Report', 3
+    menu.choice 'Exit', 4
+  end
+
+    
 
     case admin_choice
     #THIS SHOWS TOTAL SCORE AND USERS DATA
@@ -114,5 +120,6 @@ while exit_app == false
   when 3
     puts "Thanks for using MoralTrack"
     exit_app = true
+    system("clear")
   end
 end
