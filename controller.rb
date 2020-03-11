@@ -3,12 +3,13 @@ require "artii"
 require "tty-prompt"
 
 #THESE ARE THE REQUIRED LOCAL FILES
-require_relative "./classes.rb"
-require_relative "./progressbar.rb"
+require_relative "./classes/employee.rb"
+require_relative "./classes/progressbar.rb"
+require_relative "./classes/download_csv.rb"
 
 #CREATING CLASS INSTANCES
-employees = Employee.new
 prompt = TTY::Prompt.new
+employees = Employee.new
 
 system("clear")
 #STARTING WELCOME SCREEN LOOP
@@ -17,7 +18,7 @@ while exit_app == false
 
   #LOGO/ FRONT PAGE
   logo = Artii::Base.new
-  puts logo.asciify("MoralTrack!")
+  puts logo.asciify("MoraleTrack!")
 
   user_input = prompt.select("Choose your destiny?") do |menu|
     menu.enum "."
@@ -48,7 +49,6 @@ while exit_app == false
       puts "Great #{username.capitalize} sounds like you had a great day... Keep it up!!!"
     else
       puts "Invalid number"
-      input = false
     end
 
     #STORES USERS MESSAGE
@@ -112,7 +112,7 @@ while exit_app == false
 
     #EXITS APP
   when 3
-    puts "Thanks for using MoralTrack"
+    puts "Thanks for using MoraleTrack"
     exit_app = true
     system("clear")
   end

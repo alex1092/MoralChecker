@@ -1,6 +1,7 @@
 #Gem require for csv
 require "csv"
 
+
 class Employee
   attr_reader :name, :userscore
 
