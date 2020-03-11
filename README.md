@@ -87,10 +87,5 @@ Utilize a suitable project management platform to track this implementation plan
 
 ## Help Docs
 
-Design help documentation which includes a set of instructions which accurately describe how to use and install the application.
-
-You must include:
-- steps to install the application
-- any dependencies required by the application to operate
-- any system/hardware requirements
+Help docs can be found at [Help Doc](./docs/help.md)
 
