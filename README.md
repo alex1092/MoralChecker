@@ -70,9 +70,15 @@ data flow diagram https://github.com/alex1092/MoralChecker/blob/master/docs/data
 
 Data flow diagram can be found at https://github.com/alex1092/MoralChecker/blob/master/docs/moralcheck_diagram.png
 
+[Diagram](/docs/moralcheck_diagram.png)
+
 ## Implementation Plan
 
 Implementation plan was created using Trello and can be located at https://trello.com/b/YzGTufvi/moraltrack
+
+[Trello Board Screenshot 1](./docs/trello_board.png)
+
+[Trello Board Screenshot 2](./docs/trello_board2.png)
 
 ## Help Docs
 
