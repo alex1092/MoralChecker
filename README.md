@@ -54,7 +54,7 @@ data flow diagram https://github.com/alex1092/MoralChecker/blob/master/docs/data
 
 4. If the user selects option 2 (Admin) they will be taken to the admin page where they will have 4 selections 1 - Check stats, 2 - Download data, 3 - weekly data & 4 - exit 
 
-### From admin (user selects 2)
+##### From admin (user selects 2)
 - If the user selects 1 - Check stats employees.get_data will be called and will return @name, @userscore & @message. the user will then be prompted to hit enter where they will be returned to the front screen
 
 - If the user selects 2 - Download data employees.download_csv will execute and @name, @userscore & @message will be sent to file.csv.  The user will then be prompted to return to the front screen 
