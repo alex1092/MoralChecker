@@ -5,7 +5,6 @@ require "tty-prompt"
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./classes.rb"
 require_relative "./progressbar.rb"
-require_relative "./prompt.rb"
 
 #CREATING CLASS INSTANCES
 employees = Employee.new
