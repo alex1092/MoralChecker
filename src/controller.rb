@@ -1,7 +1,5 @@
 #THESE ARE THE REQUIRED GEMS
 require "artii"
-require "tty-file"
-require "csv"
 
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./classes.rb"
@@ -19,7 +17,7 @@ while exit_app == false
     puts logo.asciify("MoralTrack!")
 
     puts "------Welcome to MoralTrack choose your option-----"
-
+    br
     puts "1 - Enter your score\n"
     puts "2 - Admin\n"
     puts "3 - Exit"
@@ -105,7 +103,8 @@ while exit_app == false
 
       #EXITS THE APP/LOOP
     when 4
-      puts "Thanks for using MoralTrack"
+      puts "Thanks Admin"
+      system("clear")
     else
       puts "Thats not a valid input"
     end
