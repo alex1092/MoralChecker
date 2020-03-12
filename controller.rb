@@ -5,7 +5,7 @@ require "tty-prompt"
 #THESE ARE THE REQUIRED LOCAL FILES
 require_relative "./classes/employee.rb"
 require_relative "./classes/progressbar.rb"
-
+require_relative "./methods/methods.rb"
 #CREATING CLASS INSTANCES
 prompt = TTY::Prompt.new
 employees = Employee.new
@@ -19,7 +19,7 @@ while exit_app == false
   logo = Artii::Base.new
   puts logo.asciify("MoraleTrack!")
 
-  user_input = prompt.select("Choose your destiny?") do |menu|
+  user_input = prompt.select("Welcome to MoraleTrack what would you like to do?") do |menu|
     menu.enum "."
     menu.choice "Enter your score", 1
     menu.choice "Admin", 2
@@ -60,7 +60,7 @@ while exit_app == false
     system("clear")
 
     #SAVES EMPLOYEE NAME AND SCORE
-    employees.data(username, user_score)
+    employees.input_data(username, user_score,)
 
     #ADMINS MENU
   when 2
@@ -79,7 +79,7 @@ while exit_app == false
     #THIS SHOWS TOTAL SCORE AND USERS DATA
     when 1
       system("clear")
-      puts "#{employees.get_data}\n"
+      puts "#{employees.veiw_all_inputs}\n"
       puts "Overall total: #{employees.score_total} "
       puts "Press ENTER to continue"
       gets
