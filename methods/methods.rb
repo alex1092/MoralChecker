@@ -3,7 +3,10 @@ require_relative "../classes/employee.rb"
 
 #required gems
 require "artii"
-
+require "tty-prompt"
+require 'colorize'
+require 'csv'
+require 'colorized_string'
 #INITIALIZE CLASSES TO PASS TO METHODS
 @employees = Employee.new
 @prompt = TTY::Prompt.new
