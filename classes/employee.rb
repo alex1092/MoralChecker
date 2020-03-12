@@ -10,7 +10,7 @@ class Employee
     @message = []
   end
 
-  def input_data(name, userscore)
+  def name_score(name, userscore)
     @name.push(name)
     @userscore.push(userscore)
   end

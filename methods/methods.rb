@@ -1,7 +1,10 @@
-#METHODS
+#required files
 require_relative "../classes/employee.rb"
+
+#required gems
 require "artii"
-#INITIALIZE CLASSES
+
+#INITIALIZE CLASSES TO PASS TO METHODS
 @employees = Employee.new
 @prompt = TTY::Prompt.new
 
@@ -27,11 +30,13 @@ def collect_username
   return gets.chomp
 end
 
+#PROMPTS USER FOR THEIR SCORE FROM 1-10
 def collect_score(username)
   puts "Ok #{username}, from 1 - 10 how was your day "
   gets.chomp.to_i
 end
 
+#THIS TAKES THE USERS SCORE AND RESPONDS WITH A MESSAGE
 def respond_to_user_score(username, user_score)
   case user_score
   when 1...3
@@ -47,25 +52,29 @@ def respond_to_user_score(username, user_score)
   end
 end
 
+#COLLECTING USERS MESSAGE
 def collect_user_message
   puts "Type your message below"
   gets.chomp
 end
 
+#DEFAULT PRESS ENTER TO CLEAR SCREEN
 def press_enter_to_continue
   puts "Press ENTER to continue"
   gets
   system("clear")
 end
 
+#TAKES USER_MESSAGE AND STORES IT TO employees.set_message
 def store_user_message(user_message)
   @employees.set_message(user_message)
   puts "Thanks for that :)"
   press_enter_to_continue
 end
 
+#STORES NAME AND SCORE
 def store_user_data(username, user_score)
-  @employees.input_data(username, user_score)
+  @employees.name_score(username, user_score)
 end
 
 def display_total_scores_and_data
