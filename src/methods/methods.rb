@@ -26,7 +26,7 @@ end
 def display_logo
   system("clear")
   logo = Artii::Base.new
-  puts logo.asciify("MoralTrack!")
+  puts logo.asciify("MoraleTrack!")
 end
 
 #MAIN MENU
