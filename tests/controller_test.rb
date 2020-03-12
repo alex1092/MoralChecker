@@ -1,21 +1,19 @@
 #this is my test file`
-
-
-require 'test/unit'
-require_relative '../src/classes.rb'
-
+require "test/unit"
+require_relative "../classes/employee.rb"
 
 class EmployeeTest < Test::Unit::TestCase
-    
-    #HERE I AM TESTING IF INITIALIZE RETURNS 3 SEPEREATE ARRAYS
-    def test_initialize
-        assert_equal([],[],[])
-    end
+  #testing is intitialize gives an empty array
+#   def test_initialize
+#     employee = Employee.new
+#     assert_equal([], employee.name)
+#   end
 
-    #HERE I AM TESTING IF DATA RETURNS 2 ARRAYS WITH NAME AND STAT DATA
-    def test_data(name, stat)
-        employee.data(["Name"], [10])
-        assert_equal(["Name"] [10], employee.data)
-    end
+  #testing if name_score pushes value to array
+  def test_name_score(name, userscore)
+    employee = Employee.new
+    @name.push(name)
+    @userscore.push(userscore)
+    assert_equal(["alex"][10], employee.name_score)
+  end
 end
-employee = Employee.new

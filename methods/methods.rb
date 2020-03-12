@@ -16,7 +16,7 @@ end
 
 #MAIN MENU
 def collect_main_menu_choice
-  @prompt.select("Welcome To MoraleCheck What Would You Like To Do?") do |menu|
+  @prompt.select("Welcome To MoraleCheck What Would You Like To Do?".colorize(:blue)) do |menu|
     menu.enum "."
     menu.choice "Enter your score", 1
     menu.choice "Admin", 2
@@ -77,12 +77,14 @@ def store_user_data(username, user_score)
   @employees.name_score(username, user_score)
 end
 
+#DISPLAYS TOTALS 
 def display_total_scores_and_data
   system("clear")
   puts "#{@employees.veiw_all_inputs}\n"
   puts "Overall total: #{@employees.score_total} "
   press_enter_to_continue
 end
+
 
 def export_data_to_csv
   progress_bar
@@ -96,6 +98,7 @@ def display_total_weekly_score
   press_enter_to_continue
 end
 
+#ITERATES THROUGH ADMIN CHOICES
 def collect_admin_menu_choice
   admin_choice = @prompt.select("What would you like to do?") do |menu|
     menu.enum "."
@@ -106,6 +109,7 @@ def collect_admin_menu_choice
   end
 end
 
+#ADMIN FLOW
 def run_admin_flow
   system("clear")
   puts "Welcome Admin"
@@ -128,6 +132,7 @@ def run_admin_flow
   true
 end
 
+#SHOWS THE USER SCORE FLOW
 def run_user_score_flow
   system("clear")
 
@@ -140,6 +145,7 @@ def run_user_score_flow
   store_user_data(username, user_score)
 end
 
+ #THIS METHOD RUNS THE APP
 def run_app
   case collect_main_menu_choice
   when 1

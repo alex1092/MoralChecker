@@ -21,7 +21,6 @@ class Employee
 
   def score_total
     @score_total = @userscore.sum
-    
   end
 
   def set_message(message)

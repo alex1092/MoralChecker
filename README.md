@@ -4,7 +4,7 @@
 
 Trello located at - https://trello.com/b/YzGTufvi/Moraletrack
 
-#### to install simply type into your terminal ``` bash ./install_and_run.sh ```
+#### to install simply type into your terminal ``` bash ./bin/install_and_run.sh ```
 
 # Software Development Plan
 
@@ -39,6 +39,14 @@ Using in built classes, you can add as many employees as you want tracking as ma
 4. DOWNLOAD CSV WITH STAFF DETAILS
 
 In the admin panel you will have the option to download a detailed list of all staff, read messages and check staffs Morale. This is useful if you need to show others how staffs Morale is tracking and to help tackle problems within your organization
+
+5. THE ABILITY TO CHECK MORALE TOTALS
+
+In the admin panel you have the option to check weekly reports with option 3 - Weekly reports.  Using this data you can establish an understanding of your teams Morale and make a descision on what steps to take in order to raise overall happiness 
+
+6. CODE WAS EFFICIENCTLY PLACED WITHIN METHODS
+
+The code was placed within methods to make it easier to read and understand for any developer trying to make updates or add extra features 
 
 ## User Interaction and Experience
 
@@ -109,4 +117,9 @@ MoraleCheck needs you to have Ruby installed and the gems detailed in the gem fi
 #### If your struggling to instal bundler 
 
 [![How to install bundler](https://youtu.be/lMhoz29A2Jg)](https://youtu.be/lMhoz29A2Jg)
+
+##### References 
+[Stack Overflow](https://stackoverflow.com/)
+[Ruby-Doc](https://ruby-doc.org/)
+[Ruby learning](http://rubylearning.com/)
 
