@@ -7,9 +7,21 @@ require "tty-prompt"
 require "colorize"
 require "csv"
 require "colorized_string"
+require "tty-progressbar"
+
 #INITIALIZE CLASSES TO PASS TO METHODS
 @employees = Employee.new
 @prompt = TTY::Prompt.new
+
+
+#THIS IS MY PROGRESS BAR METHOD
+def progress_bar
+  bar = TTY::ProgressBar.new("downloading [:bar]", total: 30)
+  30.times do
+    sleep(0.1)
+    bar.advance(1)
+  end
+end
 
 #Logo
 def display_logo
