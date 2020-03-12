@@ -20,8 +20,8 @@ class Employee
   end
 
   def score_total
-    score_total = @userscore.sum
-    return score_total
+    @score_total = @userscore.sum
+    
   end
 
   def set_message(message)
@@ -30,7 +30,7 @@ class Employee
 
   def download_csv
     CSV.open("./file.csv", "w") do |csv|
-      csv << ["Username", "Score", "Message", "Current total = #{score_total}"]
+      csv << ["Username", "Score", "Message", "Current total = #{@score_total}"]
       data = [@name, @userscore, @message]
       rows = data.transpose
       rows.each do |row|
