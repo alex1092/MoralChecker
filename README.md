@@ -50,7 +50,7 @@ The code was placed within methods to make it easier to read and understand for 
 
 ## User Interaction and Experience
 
-data flow diagram https://github.com/alex1092/MoraleChecker/blob/master/docs/dataflow_diagram.png
+[data flow diagram](https://github.com/alex1092/MoraleChecker/blob/master/docs/moralcheck_diagram.png)
 
 1. To run the application first you need to install all the gems and dependencies you can either type into your terminal ``` bash install_and_run.sh ``` or ``` bundle install ``` then to run MoraleCheck type the following into your terminal ``` controller.rb ``` 
 
@@ -120,6 +120,8 @@ MoraleCheck needs you to have Ruby installed and the gems detailed in the gem fi
 
 ##### References 
 [Stack Overflow](https://stackoverflow.com/)
+
 [Ruby-Doc](https://ruby-doc.org/)
+
 [Ruby learning](http://rubylearning.com/)
 
