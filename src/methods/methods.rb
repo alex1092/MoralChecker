@@ -4,15 +4,16 @@ require_relative "../classes/employee.rb"
 #required gems
 require "artii"
 require "tty-prompt"
-require 'colorize'
-require 'csv'
-require 'colorized_string'
+require "colorize"
+require "csv"
+require "colorized_string"
 #INITIALIZE CLASSES TO PASS TO METHODS
 @employees = Employee.new
 @prompt = TTY::Prompt.new
 
 #Logo
 def display_logo
+  system("clear")
   logo = Artii::Base.new
   puts logo.asciify("MoralTrack!")
 end
@@ -80,14 +81,13 @@ def store_user_data(username, user_score)
   @employees.name_score(username, user_score)
 end
 
-#DISPLAYS TOTALS 
+#DISPLAYS TOTALS
 def display_total_scores_and_data
   system("clear")
   puts "#{@employees.veiw_all_inputs}\n"
   puts "Overall total: #{@employees.score_total} "
   press_enter_to_continue
 end
-
 
 def export_data_to_csv
   progress_bar
@@ -148,7 +148,7 @@ def run_user_score_flow
   store_user_data(username, user_score)
 end
 
- #THIS METHOD RUNS THE APP
+#THIS METHOD RUNS THE APP
 def run_app
   case collect_main_menu_choice
   when 1
@@ -170,4 +170,18 @@ keep_going = true
 while keep_going == true
   display_logo
   keep_going = run_app
+end
+
+#Handles export csv erros
+begin
+  export_data_to_csv
+rescue
+  "whoops something went wrong :("
+end
+
+#handles errors with progress_bar
+begin
+  progress_bar
+rescue
+  "Loading files"
 end

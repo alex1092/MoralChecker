@@ -5,4 +5,3 @@ require_relative "./methods/methods.rb"
 
 #THIS METHOD RUNS THE APP....... :) Have fun
 run_app
-
