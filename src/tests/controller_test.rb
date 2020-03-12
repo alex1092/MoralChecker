@@ -13,11 +13,9 @@ class EmployeeTest < Test::Unit::TestCase
 Test if veiw all input returns
 name userscore and message
 =end
-def test_veiw_all_inputs
+  def test_veiw_all_inputs
     employee = Employee.new
     return @name, @userscore, @message
-    assert_equal([] [] [], employee.veiw_all_inputs)
+    assert_equal([][][], employee.veiw_all_inputs)
   end
 end
-
-

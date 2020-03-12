@@ -13,7 +13,6 @@ require "tty-progressbar"
 @employees = Employee.new
 @prompt = TTY::Prompt.new
 
-
 #THIS IS MY PROGRESS BAR METHOD
 def progress_bar
   bar = TTY::ProgressBar.new("downloading [:bar]", total: 30)
