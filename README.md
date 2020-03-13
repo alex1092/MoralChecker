@@ -4,8 +4,7 @@
 
 Trello located at - https://trello.com/b/YzGTufvi/Moraletrack
 
-#### to install simply type into your terminal ``` 
-bash ./bin/install_and_run.sh ```
+#### to install simply type into your terminal ``` bash ./bin/install_and_run.sh ```
 
 # Software Development Plan
 
