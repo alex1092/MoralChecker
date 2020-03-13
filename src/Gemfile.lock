@@ -4,6 +4,7 @@ GEM
     artii (2.1.2)
     colorize (0.8.1)
     csv (3.1.2)
+    thor (1.0.1)
     tty-progressbar (0.10.1)
       tty-screen (~> 0.5.0)
     tty-screen (0.5.1)
@@ -15,6 +16,7 @@ DEPENDENCIES
   artii (~> 2.1)
   colorize (~> 0.8.1)
   csv
+  thor
   tty-progressbar
 
 BUNDLED WITH
