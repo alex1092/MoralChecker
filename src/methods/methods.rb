@@ -196,3 +196,9 @@ begin
 rescue
   "Loading files"
 end
+
+def print_csv_from_terminal
+  if ARGV[0] == “p”
+    export_data_to_csv
+  end
+end
